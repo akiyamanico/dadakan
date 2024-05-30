@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('create', [CreateController::class, 'index'])->name('create');
-Route::get('edit/{id}', [EditController::class, 'index'])->name('edit');
+Route::get('edit/{id?}', [EditController::class, 'index'])->name('edit');
 Route::get('delete/{id}', [DeleteController::class, 'delete'])->name('delete');
 
 //POST DATA TO DADAKAN
 Route::POST('createdata', [CreateController::class, 'create'])->name('createdata');
-Route::POST('editdata/{id}', [EditController::class, 'edit'])->name('editdata');
+Route::POST('editdata/{id?}', [EditController::class, 'edit'])->name('editdata');
