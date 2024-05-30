@@ -10,7 +10,7 @@ class DeleteController extends Controller
 {
     public function delete($id){
         $cek = DB::table("dadakan")->where("id",$id)->first();
-        if($cek && File::exists(public_path('foto/'.$cek->foto_user))){
+        if(File::exists(public_path('foto/'.$cek->foto_user))){
             File::delete(public_path('foto/'.$cek->foto_user));
         }
         if($cek){
