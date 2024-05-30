@@ -16,6 +16,6 @@ class DeleteController extends Controller
         if($cek){
             $cek = DB::table("dadakan")->where("id",$id)->delete();
         }
-        return redirect('/');
+        return back();
     }
 }
