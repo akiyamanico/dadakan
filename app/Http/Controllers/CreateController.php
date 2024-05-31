@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Log;
 class CreateController extends Controller
 {
     public function index(){
-        return view('TambahData');
+        $data = DB::table('dadakan')->select('pendidikan_terakhir')->get();
+        return view('TambahData', compact('data'));
     }
     public function create(CreateRequest $r){
         if($r->validated()){

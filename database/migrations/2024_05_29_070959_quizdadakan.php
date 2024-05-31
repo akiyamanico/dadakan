@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('telpon');
             $table->string('alamat');
-            $table->string('pendidikan_terakhir');
+            $table->enum('pendidikan_terakhir',['SD','SMP','SMA']);
             $table->string('foto_user');
         });
     }

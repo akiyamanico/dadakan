@@ -29,9 +29,12 @@ Tambah Mapel
         <span>{{$errors->first('alamat')}}</span>
     </div>
     <div class="flex flex-col gap-2">
-        <label for="">Pendidikan Terakhir</label>
-        <input type="text" name="pendidikan_terakhir" value="{{old('pendidikan_terakhir')}}" class="p-2 border rounded-md">
-        <span>{{$errors->first('pendidikan_terakhir')}}</span>
+    <label for="pendidikan_terakhir">Pendidikan Terakhir</label>
+<select name="pendidikan_terakhir" id="pendidikan_terakhir" class="p-2 border rounded-md">
+    <option value="SD">SD</option>
+    <option value="SMP">SMP</option>
+    <option value="SMA">SMA</option>
+    </select>
     </div>
     <div class="flex flex-col gap-2">
         <label for="">Foto User</label>
